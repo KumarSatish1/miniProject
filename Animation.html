@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body,html{
+            height: 100%;
+            width:100%;
+        }
+       
+        .main{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        body img{
+            height: 500px;
+            width:350px;
+            filter: drop-shadow(2px 3px 4px rgb(111, 2, 184));
+            border-radius: 8px;
+            position: relative;
+            z-index: 999;
+            transition: all 1s linear;
+        }
+        .scroll_text{
+            position: absolute;
+            top: 20%;
+            width: 100%;
+            white-space: nowrap;
+            overflow-x: hidden;
+            overflow-y: hidden;
+           
+        }
+        .scroll_text h1{
+            display: inline-block;
+            font-size: 130px;
+            font-family: monospace;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            -webkit-text-stroke-width: 4px;
+            color: transparent;
+            -webkit-text-stroke-color: rgb(143, 5, 5);
+            animation-name: text_animation;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .scroll_text1{
+            position: absolute;
+            top: 40%;
+            width: 100%;
+            white-space: nowrap;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            z-index: 1000;
+           
+        }
+        .scroll_text1 h1{
+            display: inline-block;
+            font-size: 130px;
+            font-family: monospace;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: black;
+            
+            animation-name:text_animation;
+            animation-duration: 2s;
+            animation-timing-function:linear;
+            animation-iteration-count:infinite;
+            animation-direction: reverse;
+           
+        }
+        .scroll_text2{
+            position: absolute;
+            top: 60%;
+            width: 100%;
+            white-space: nowrap;
+            overflow-x: hidden;
+            overflow-y: hidden;
+           
+        }
+        .scroll_text2 h1{
+            display: inline-block;
+           
+            font-size: 130px;
+            font-family: monospace;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            -webkit-text-stroke-width: 4px;
+            -webkit-text-stroke-color: rgb(0, 255, 85);
+            color: transparent;
+            animation-name: text_animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes text_animation {
+            0%{
+                transform: translateX(-100%);
+            }
+            100%{
+                transform: translateX(0);
+
+            }
+            
+        }
+        
+        .main h2{
+            position: absolute;
+            z-index: 1000;
+            top:15%;
+            color: white;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+        h2::after{
+            content: "";
+        }
+        .main img:hover{
+            /* height:550px;
+            width:400px; */
+            transform: scale(1.1);
+        }
+        .main h2:hover{
+            /* height:550px;
+            width:400px; */
+           color: rgb(0, 255, 55);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <img src="https://i.pinimg.com/236x/22/46/01/2246019dd9c3e828383daa343e8a7a25.jpg" alt="Image Hai">
+        <h2>Indian Flag</h2>
+        
+        <div class="scroll_text">
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+        </div>
+        <div class="scroll_text1">
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+        </div>
+        <div class="scroll_text2">
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+            <h1>INDIA</h1>
+        </div>
+    </div>
+    
+</body>
+</html>
